@@ -1,0 +1,6 @@
+---
+# vars file for install-jenkins
+
+pacotes_debian:
+  - apt-transport-https
+  - openjdk-8-jre
