@@ -5,11 +5,15 @@
     name: "{{ pacotes_debian }}"
     state: present
     update_cache: yes
+  tags:
+    - deps
 
 - name: Importando a chave do repositorio do Jenkins
   apt_key: 
     url: https://pkg.jenkins.io/debian-stable/jenkins.io.key
     state: present
+  tags:
+    - repo
 
 - name: Adicionando o Repositorio do Jenkins
   apt_repository:
@@ -17,6 +21,8 @@
     state: present
     filename: jenkins
     update_cache: yes
+  tags:
+    - repo
 
 - name: Instalando o Jenkins
   apt:
@@ -25,3 +31,5 @@
     update_cache: yes
   notify:
     - Start Jenkins
+  tags:
+    - jenkins
