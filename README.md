@@ -1,7 +1,7 @@
 install-jenkins
 =========
 
-Role do Ansible para instalação de um servidor Jenkins.
+Role do Ansible para instalação de um servidor Jenkins (com OpenJDK 8).
 
 Distribuições Suportadas pela Role
 ------------
