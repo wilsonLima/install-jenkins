@@ -1,6 +1,6 @@
 ---
 
-- name: Instalando os pre-requisitos
+- name: "Instalando os pre-requisitos"
   apt:
     name: "{{ pacotes_debian }}"
     state: present
@@ -8,23 +8,26 @@
   tags:
     - deps
 
-- name: Importando a chave do repositorio do Jenkins
+
+- name: "Importando a chave do repositorio do Jenkins"
   apt_key: 
-    url: https://pkg.jenkins.io/debian-stable/jenkins.io.key
+    url: "https://pkg.jenkins.io/debian-stable/jenkins.io.key"
     state: present
   tags:
     - repo
 
-- name: Adicionando o Repositorio do Jenkins
+
+- name: "Adicionando o Repositorio do Jenkins"
   apt_repository:
-    repo: deb https://pkg.jenkins.io/debian-stable binary/
+    repo: "deb https://pkg.jenkins.io/debian-stable binary/"
     state: present
     filename: jenkins
     update_cache: yes
   tags:
     - repo
 
-- name: Instalando o Jenkins
+
+- name: "Instalando o Jenkins"
   apt:
     name: jenkins
     state: present

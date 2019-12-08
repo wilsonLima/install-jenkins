@@ -6,8 +6,8 @@ Role do Ansible para instalação de um servidor Jenkins (com OpenJDK 8).
 Distribuições Suportadas pela Role
 ------------
 
-- Debian
-- RedHat ou CentOS
+- Debian 9 ou superior
+- RedHat ou CentOS 7 ou superior
 
 Tags da Role 
 --------------

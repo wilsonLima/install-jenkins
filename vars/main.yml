@@ -1,6 +1,10 @@
 ---
 # vars file for install-jenkins
 
+pacotes_centos:
+  - java-1.8.0-openjdk-devel
+
 pacotes_debian:
   - apt-transport-https
-  - openjdk-8-jre
+  - build-essential
+  - default-jre
